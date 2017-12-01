@@ -64,7 +64,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.thesmsworks.co.uk:8080/v1*
+All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
