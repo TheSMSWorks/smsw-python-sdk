@@ -45,7 +45,7 @@ class Configuration(object):
         Constructor
         """
         # Default Base url
-        self.host = "https://api.thesmsworks.co.uk:8080/v1"
+        self.host = "https://api.thesmsworks.co.uk/v1"
         # Default api client
         self.api_client = None
         # Temp file folder for downloading files
