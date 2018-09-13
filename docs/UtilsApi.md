@@ -4,17 +4,17 @@ All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**hello**](UtilsApi.md#hello) | **GET** /utils/hello | 
+[**test**](UtilsApi.md#test) | **GET** /utils/test | 
 
 
-# **hello**
-> HelloWorldResponse hello(name=name)
+# **test**
+> TestResponse test()
 
 
 
-Returns 'Hello' to the caller
+Returns the customer ID to the caller
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -24,24 +24,20 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.UtilsApi()
-name = 'name_example' # str | The name of the person to whom to say hello (optional)
 
-try: 
-    api_response = api_instance.hello(name=name)
+try:
+    api_response = api_instance.test()
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UtilsApi->hello: %s\n" % e)
+    print("Exception when calling UtilsApi->test: %s\n" % e)
 ```
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **str**| The name of the person to whom to say hello | [optional] 
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**HelloWorldResponse**](HelloWorldResponse.md)
+[**TestResponse**](TestResponse.md)
 
 ### Authorization
 

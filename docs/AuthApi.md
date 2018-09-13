@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 Generates an API Key/Secret pair
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -27,7 +27,7 @@ from pprint import pprint
 api_instance = swagger_client.AuthApi()
 customerid = 'customerid_example' # str | The Customer ID
 
-try: 
+try:
     api_response = api_instance.key_secret(customerid)
     pprint(api_response)
 except ApiException as e:
@@ -62,7 +62,7 @@ No authorization required
 
 Generates a Json Web Token
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -74,7 +74,7 @@ from pprint import pprint
 api_instance = swagger_client.AuthApi()
 credentials = swagger_client.Login() # Login | API Key & Secret
 
-try: 
+try:
     api_response = api_instance.login(credentials)
     pprint(api_response)
 except ApiException as e:

@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Cancels a scheduled SMS message
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -26,15 +26,16 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: JWT
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BatchMessagesApi()
+api_instance = swagger_client.BatchMessagesApi(swagger_client.ApiClient(configuration))
 batchid = 'batchid_example' # str | The ID of the batch you would like returned
 
-try: 
+try:
     api_response = api_instance.cancel_scheduled_batch_job(batchid)
     pprint(api_response)
 except ApiException as e:
@@ -69,7 +70,7 @@ Name | Type | Description  | Notes
 
 Retrieve all messages in a batch with the given batch ID
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -78,15 +79,16 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: JWT
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BatchMessagesApi()
+api_instance = swagger_client.BatchMessagesApi(swagger_client.ApiClient(configuration))
 batchid = 'batchid_example' # str | The ID of the batch you would like returned
 
-try: 
+try:
     api_response = api_instance.get_batch_by_id(batchid)
     pprint(api_response)
 except ApiException as e:
@@ -119,9 +121,9 @@ Name | Type | Description  | Notes
 
 
 
-Schedules a batch of SMS messages to be sent at the date-time you specify
+Schedules a batch of SMS messages to be sent at the date time you specify
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -130,15 +132,16 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: JWT
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BatchMessagesApi()
+api_instance = swagger_client.BatchMessagesApi(swagger_client.ApiClient(configuration))
 sms_message = swagger_client.BatchMessage() # BatchMessage | Message properties
 
-try: 
+try:
     api_response = api_instance.schedule_batch(sms_message)
     pprint(api_response)
 except ApiException as e:
@@ -173,7 +176,7 @@ Name | Type | Description  | Notes
 
 Send a single SMS message to multiple recipients
 
-### Example 
+### Example
 ```python
 from __future__ import print_function
 import time
@@ -182,15 +185,16 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: JWT
-swagger_client.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = swagger_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.BatchMessagesApi()
+api_instance = swagger_client.BatchMessagesApi(swagger_client.ApiClient(configuration))
 sms_message = swagger_client.BatchMessage() # BatchMessage | Message properties
 
-try: 
+try:
     api_response = api_instance.send_batch(sms_message)
     pprint(api_response)
 except ApiException as e:
