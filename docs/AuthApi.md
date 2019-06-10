@@ -7,7 +7,6 @@ Method | HTTP request | Description
 [**key_secret**](AuthApi.md#key_secret) | **GET** /auth/getApiKey | 
 [**login**](AuthApi.md#login) | **POST** /auth/token | 
 
-
 # **key_secret**
 > ApiKeyResponse key_secret(customerid)
 
@@ -50,13 +49,13 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json;charset=UTF-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **login**
-> TokenResponse login(credentials)
+> TokenResponse login(body)
 
 
 
@@ -72,10 +71,10 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.AuthApi()
-credentials = swagger_client.Login() # Login | API Key & Secret
+body = swagger_client.Login() # Login | API Key & Secret
 
 try:
-    api_response = api_instance.login(credentials)
+    api_response = api_instance.login(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling AuthApi->login: %s\n" % e)
@@ -85,7 +84,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **credentials** | [**Login**](Login.md)| API Key &amp; Secret | 
+ **body** | [**Login**](Login.md)| API Key &amp; Secret | 
 
 ### Return type
 

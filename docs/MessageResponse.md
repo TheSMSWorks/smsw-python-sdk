@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **content** | **str** |  | 
 **created** | **str** |  | 
 **customerid** | **str** |  | 
-**destination** | **float** |  | 
-**failurereason** | [**MessageResponseFailurereason**](MessageResponseFailurereason.md) |  | [optional] 
+**destination** | [**BigDecimal**](BigDecimal.md) |  | 
+**failurereason** | **object** |  | [optional] 
 **id** | **str** |  | [optional] 
 **keyword** | **str** |  | 
 **messageid** | **str** |  | 
@@ -19,5 +19,4 @@ Name | Type | Description | Notes
 **tag** | **str** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
-
 

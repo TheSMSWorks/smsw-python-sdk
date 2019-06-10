@@ -9,7 +9,6 @@ Method | HTTP request | Description
 [**schedule_batch**](BatchMessagesApi.md#schedule_batch) | **POST** /batch/schedule | 
 [**send_batch**](BatchMessagesApi.md#send_batch) | **POST** /batch/send | 
 
-
 # **cancel_scheduled_batch_job**
 > CancelledMessageResponse cancel_scheduled_batch_job(batchid)
 
@@ -58,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json;charset=UTF-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -111,13 +110,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json;charset=UTF-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schedule_batch**
-> ScheduledBatchResponse schedule_batch(sms_message)
+> ScheduledBatchResponse schedule_batch(body)
 
 
 
@@ -139,10 +138,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.BatchMessagesApi(swagger_client.ApiClient(configuration))
-sms_message = swagger_client.BatchMessage() # BatchMessage | Message properties
+body = swagger_client.BatchMessage() # BatchMessage | Message properties
 
 try:
-    api_response = api_instance.schedule_batch(sms_message)
+    api_response = api_instance.schedule_batch(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BatchMessagesApi->schedule_batch: %s\n" % e)
@@ -152,7 +151,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sms_message** | [**BatchMessage**](BatchMessage.md)| Message properties | 
+ **body** | [**BatchMessage**](BatchMessage.md)| Message properties | 
 
 ### Return type
 
@@ -170,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **send_batch**
-> BatchMessageResponse send_batch(sms_message)
+> BatchMessageResponse send_batch(body)
 
 
 
@@ -192,10 +191,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.BatchMessagesApi(swagger_client.ApiClient(configuration))
-sms_message = swagger_client.BatchMessage() # BatchMessage | Message properties
+body = swagger_client.BatchMessage() # BatchMessage | Message properties
 
 try:
-    api_response = api_instance.send_batch(sms_message)
+    api_response = api_instance.send_batch(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BatchMessagesApi->send_batch: %s\n" % e)
@@ -205,7 +204,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sms_message** | [**BatchMessage**](BatchMessage.md)| Message properties | 
+ **body** | [**BatchMessage**](BatchMessage.md)| Message properties | 
 
 ### Return type
 

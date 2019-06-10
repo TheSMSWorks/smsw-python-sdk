@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**schedule_message**](MessagesApi.md#schedule_message) | **POST** /message/schedule | 
 [**send_message**](MessagesApi.md#send_message) | **POST** /message/send | 
 
-
 # **cancel_scheduled_job**
 > CancelledMessageResponse cancel_scheduled_job(messageid)
 
@@ -60,13 +59,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json;charset=UTF-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_inbox_messages**
-> MessagesResponse get_inbox_messages(query)
+> MessagesResponse get_inbox_messages(body)
 
 
 
@@ -88,10 +87,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-query = swagger_client.Query() # Query | 
+body = swagger_client.Query() # Query | 
 
 try:
-    api_response = api_instance.get_inbox_messages(query)
+    api_response = api_instance.get_inbox_messages(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MessagesApi->get_inbox_messages: %s\n" % e)
@@ -101,7 +100,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | [**Query**](Query.md)|  | 
+ **body** | [**Query**](Query.md)|  | 
 
 ### Return type
 
@@ -166,13 +165,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json;charset=UTF-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_messages**
-> MessagesResponse get_messages(query)
+> MessagesResponse get_messages(body)
 
 
 
@@ -194,10 +193,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-query = swagger_client.Query() # Query | 
+body = swagger_client.Query() # Query | 
 
 try:
-    api_response = api_instance.get_messages(query)
+    api_response = api_instance.get_messages(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MessagesApi->get_messages: %s\n" % e)
@@ -207,7 +206,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **query** | [**Query**](Query.md)|  | 
+ **body** | [**Query**](Query.md)|  | 
 
 ### Return type
 
@@ -225,7 +224,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **schedule_message**
-> ScheduledMessageResponse schedule_message(sms_message)
+> ScheduledMessageResponse schedule_message(body)
 
 
 
@@ -247,10 +246,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-sms_message = swagger_client.Message() # Message | Message properties
+body = swagger_client.Message() # Message | Message properties
 
 try:
-    api_response = api_instance.schedule_message(sms_message)
+    api_response = api_instance.schedule_message(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MessagesApi->schedule_message: %s\n" % e)
@@ -260,7 +259,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sms_message** | [**Message**](Message.md)| Message properties | 
+ **body** | [**Message**](Message.md)| Message properties | 
 
 ### Return type
 
@@ -278,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **send_message**
-> SendMessageResponse send_message(sms_message)
+> SendMessageResponse send_message(body)
 
 
 
@@ -300,10 +299,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.MessagesApi(swagger_client.ApiClient(configuration))
-sms_message = swagger_client.Message() # Message | Message properties
+body = swagger_client.Message() # Message | Message properties
 
 try:
-    api_response = api_instance.send_message(sms_message)
+    api_response = api_instance.send_message(body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling MessagesApi->send_message: %s\n" % e)
@@ -313,7 +312,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sms_message** | [**Message**](Message.md)| Message properties | 
+ **body** | [**Message**](Message.md)| Message properties | 
 
 ### Return type
 
