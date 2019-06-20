@@ -17,9 +17,9 @@ Python 2.7 and 3.4+
 If the python package is hosted on Github, you can install directly from Github
 
 ```sh
-pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
+pip install git+https://github.com/TheSMSWorks/smsw-python-sdk.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/TheSMSWorks/smsw-python-sdk.git`)
 
 Then import the package:
 ```python
@@ -42,35 +42,7 @@ import swagger_client
 
 ## Getting Started
 
-Please follow the [installation procedure](#installation--usage) and then run the following:
-
-```python
-from __future__ import print_function
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = swagger_client.AuthApi(swagger_client.ApiClient(configuration))
-customerid = 'customerid_example' # str | The Customer ID
-
-try:
-    api_response = api_instance.key_secret(customerid)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AuthApi->key_secret: %s\n" % e)
-
-# create an instance of the API class
-api_instance = swagger_client.AuthApi(swagger_client.ApiClient(configuration))
-body = swagger_client.Login() # Login | API Key & Secret
-
-try:
-    api_response = api_instance.login(body)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AuthApi->login: %s\n" % e)
-```
+Please follow the [installation procedure](#installation--usage)
 
 ## Documentation for API Endpoints
 
