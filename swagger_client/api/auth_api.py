@@ -35,14 +35,14 @@ class AuthApi(object):
     def key_secret(self, customerid, **kwargs):  # noqa: E501
         """key_secret  # noqa: E501
 
-        Generates an API Key/Secret pair  # noqa: E501
+        Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_secret(customerid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str customerid: The Customer ID (required)
+        :param str customerid: Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login (required)
         :return: ApiKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -57,14 +57,14 @@ class AuthApi(object):
     def key_secret_with_http_info(self, customerid, **kwargs):  # noqa: E501
         """key_secret  # noqa: E501
 
-        Generates an API Key/Secret pair  # noqa: E501
+        Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.key_secret_with_http_info(customerid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
-        :param str customerid: The Customer ID (required)
+        :param str customerid: Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login (required)
         :return: ApiKeyResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -130,7 +130,7 @@ class AuthApi(object):
     def login(self, body, **kwargs):  # noqa: E501
         """login  # noqa: E501
 
-        Generates a Json Web Token  # noqa: E501
+        Generates a JSON Web Token for including in the Authorization header of all your calls to the API. This only needs to be done once. Generate the customer ID, API Key & Secret required for this call from the API Key tab your account page.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.login(body, async_req=True)
@@ -152,7 +152,7 @@ class AuthApi(object):
     def login_with_http_info(self, body, **kwargs):  # noqa: E501
         """login  # noqa: E501
 
-        Generates a Json Web Token  # noqa: E501
+        Generates a JSON Web Token for including in the Authorization header of all your calls to the API. This only needs to be done once. Generate the customer ID, API Key & Secret required for this call from the API Key tab your account page.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.login_with_http_info(body, async_req=True)

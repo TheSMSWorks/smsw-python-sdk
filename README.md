@@ -23,7 +23,7 @@ pip install git+https://github.com/TheSMSWorks/smsw-python-sdk.git
 
 Then import the package:
 ```python
-import swagger_client 
+import swagger_client
 ```
 
 ### Setuptools
@@ -40,31 +40,27 @@ Then import the package:
 import swagger_client
 ```
 
-## Getting Started
-
-Please follow the [installation procedure](#installation--usage)
-
 ## Documentation for API Endpoints
 
 All URIs are relative to *https://api.thesmsworks.co.uk/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthApi* | [**key_secret**](docs/AuthApi.md#key_secret) | **GET** /auth/getApiKey | 
-*AuthApi* | [**login**](docs/AuthApi.md#login) | **POST** /auth/token | 
-*BatchMessagesApi* | [**cancel_scheduled_batch_job**](docs/BatchMessagesApi.md#cancel_scheduled_batch_job) | **DELETE** /batches/schedule/{batchid} | 
-*BatchMessagesApi* | [**get_batch_by_id**](docs/BatchMessagesApi.md#get_batch_by_id) | **GET** /batch/{batchid} | 
-*BatchMessagesApi* | [**schedule_batch**](docs/BatchMessagesApi.md#schedule_batch) | **POST** /batch/schedule | 
-*BatchMessagesApi* | [**send_batch**](docs/BatchMessagesApi.md#send_batch) | **POST** /batch/send | 
-*CreditsApi* | [**credits**](docs/CreditsApi.md#credits) | **GET** /credits/balance | 
-*MessagesApi* | [**cancel_scheduled_job**](docs/MessagesApi.md#cancel_scheduled_job) | **DELETE** /messages/schedule/{messageid} | 
-*MessagesApi* | [**get_inbox_messages**](docs/MessagesApi.md#get_inbox_messages) | **POST** /messages/inbox | 
-*MessagesApi* | [**get_message_by_id**](docs/MessagesApi.md#get_message_by_id) | **GET** /messages/{messageid} | 
-*MessagesApi* | [**get_messages**](docs/MessagesApi.md#get_messages) | **POST** /messages | 
-*MessagesApi* | [**schedule_message**](docs/MessagesApi.md#schedule_message) | **POST** /message/schedule | 
-*MessagesApi* | [**send_message**](docs/MessagesApi.md#send_message) | **POST** /message/send | 
-*UtilsApi* | [**get_error**](docs/UtilsApi.md#get_error) | **GET** /utils/errors/{errorcode} | 
-*UtilsApi* | [**test**](docs/UtilsApi.md#test) | **GET** /utils/test | 
+*AuthApi* | [**key_secret**](docs/AuthApi.md#key_secret) | **GET** /auth/getApiKey |
+*AuthApi* | [**login**](docs/AuthApi.md#login) | **POST** /auth/token |
+*BatchMessagesApi* | [**cancel_scheduled_batch_job**](docs/BatchMessagesApi.md#cancel_scheduled_batch_job) | **DELETE** /batches/schedule/{batchid} |
+*BatchMessagesApi* | [**get_batch_by_id**](docs/BatchMessagesApi.md#get_batch_by_id) | **GET** /batch/{batchid} |
+*BatchMessagesApi* | [**schedule_batch**](docs/BatchMessagesApi.md#schedule_batch) | **POST** /batch/schedule |
+*BatchMessagesApi* | [**send_batch**](docs/BatchMessagesApi.md#send_batch) | **POST** /batch/send |
+*CreditsApi* | [**credits**](docs/CreditsApi.md#credits) | **GET** /credits/balance |
+*MessagesApi* | [**cancel_scheduled_job**](docs/MessagesApi.md#cancel_scheduled_job) | **DELETE** /messages/schedule/{messageid} |
+*MessagesApi* | [**get_inbox_messages**](docs/MessagesApi.md#get_inbox_messages) | **POST** /messages/inbox |
+*MessagesApi* | [**get_message_by_id**](docs/MessagesApi.md#get_message_by_id) | **GET** /messages/{messageid} |
+*MessagesApi* | [**get_messages**](docs/MessagesApi.md#get_messages) | **POST** /messages |
+*MessagesApi* | [**schedule_message**](docs/MessagesApi.md#schedule_message) | **POST** /message/schedule |
+*MessagesApi* | [**send_message**](docs/MessagesApi.md#send_message) | **POST** /message/send |
+*UtilsApi* | [**get_error**](docs/UtilsApi.md#get_error) | **GET** /utils/errors/{errorcode} |
+*UtilsApi* | [**test**](docs/UtilsApi.md#test) | **GET** /utils/test |
 
 ## Documentation For Models
 
@@ -98,5 +94,3 @@ Class | Method | HTTP request | Description
 
 
 ## Author
-
-

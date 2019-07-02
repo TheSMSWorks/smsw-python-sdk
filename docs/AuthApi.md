@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 
-Generates an API Key/Secret pair
+Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login
 
 ### Example
 ```python
@@ -24,7 +24,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.AuthApi()
-customerid = 'customerid_example' # str | The Customer ID
+customerid = 'customerid_example' # str | Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login
 
 try:
     api_response = api_instance.key_secret(customerid)
@@ -37,7 +37,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **customerid** | **str**| The Customer ID | 
+ **customerid** | **str**| Utility method. Please generate your API key by following the instructions on your account page at https://thesmsworks.co.uk/user/login | 
 
 ### Return type
 
@@ -59,7 +59,7 @@ No authorization required
 
 
 
-Generates a Json Web Token
+Generates a JSON Web Token for including in the Authorization header of all your calls to the API. This only needs to be done once. Generate the customer ID, API Key & Secret required for this call from the API Key tab your account page.
 
 ### Example
 ```python

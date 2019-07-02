@@ -53,8 +53,7 @@ class SendMessageResponse(object):
         self.messageid = messageid
         self.status = status
         self.credits = credits
-        if credits_used is not None:
-            self.credits_used = credits_used
+        self.credits_used = credits_used
 
     @property
     def messageid(self):
@@ -143,6 +142,8 @@ class SendMessageResponse(object):
         :param credits_used: The credits_used of this SendMessageResponse.  # noqa: E501
         :type: BigDecimal
         """
+        if credits_used is None:
+            raise ValueError("Invalid value for `credits_used`, must not be `None`")  # noqa: E501
 
         self._credits_used = credits_used
 

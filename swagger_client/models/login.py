@@ -80,7 +80,7 @@ class Login(object):
     def key(self):
         """Gets the key of this Login.  # noqa: E501
 
-        API Key  # noqa: E501
+        API Key, available from your account area at https://thesmsworks.co.uk/user/login  # noqa: E501
 
         :return: The key of this Login.  # noqa: E501
         :rtype: str
@@ -91,7 +91,7 @@ class Login(object):
     def key(self, key):
         """Sets the key of this Login.
 
-        API Key  # noqa: E501
+        API Key, available from your account area at https://thesmsworks.co.uk/user/login  # noqa: E501
 
         :param key: The key of this Login.  # noqa: E501
         :type: str
@@ -103,7 +103,7 @@ class Login(object):
     def secret(self):
         """Gets the secret of this Login.  # noqa: E501
 
-        API Secret  # noqa: E501
+        API Secret, available from your account area at https://thesmsworks.co.uk/user/login  # noqa: E501
 
         :return: The secret of this Login.  # noqa: E501
         :rtype: str
@@ -114,7 +114,7 @@ class Login(object):
     def secret(self, secret):
         """Sets the secret of this Login.
 
-        API Secret  # noqa: E501
+        API Secret, available from your account area at https://thesmsworks.co.uk/user/login  # noqa: E501
 
         :param secret: The secret of this Login.  # noqa: E501
         :type: str
