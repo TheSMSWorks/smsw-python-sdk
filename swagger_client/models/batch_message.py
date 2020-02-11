@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.big_decimal import BigDecimal  # noqa: F401,E501
 
 
 class BatchMessage(object):
@@ -35,7 +34,7 @@ class BatchMessage(object):
         'content': 'str',
         'schedule': 'str',
         'tag': 'str',
-        'ttl': 'BigDecimal'
+        'ttl': 'float'
     }
 
     attribute_map = {
@@ -169,7 +168,7 @@ class BatchMessage(object):
     def tag(self):
         """Gets the tag of this BatchMessage.  # noqa: E501
 
-        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns.  # noqa: E501
+        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns. A maximum of 280 characters.  # noqa: E501
 
         :return: The tag of this BatchMessage.  # noqa: E501
         :rtype: str
@@ -180,7 +179,7 @@ class BatchMessage(object):
     def tag(self, tag):
         """Sets the tag of this BatchMessage.
 
-        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns.  # noqa: E501
+        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns. A maximum of 280 characters.  # noqa: E501
 
         :param tag: The tag of this BatchMessage.  # noqa: E501
         :type: str
@@ -192,10 +191,10 @@ class BatchMessage(object):
     def ttl(self):
         """Gets the ttl of this BatchMessage.  # noqa: E501
 
-        The number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.  # noqa: E501
+        The number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion. Integer.  # noqa: E501
 
         :return: The ttl of this BatchMessage.  # noqa: E501
-        :rtype: BigDecimal
+        :rtype: float
         """
         return self._ttl
 
@@ -203,10 +202,10 @@ class BatchMessage(object):
     def ttl(self, ttl):
         """Sets the ttl of this BatchMessage.
 
-        The number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.  # noqa: E501
+        The number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion. Integer.  # noqa: E501
 
         :param ttl: The ttl of this BatchMessage.  # noqa: E501
-        :type: BigDecimal
+        :type: float
         """
 
         self._ttl = ttl

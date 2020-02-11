@@ -30,36 +30,44 @@ class Query(object):
     """
     swagger_types = {
         'status': 'str',
+        'credits': 'float',
         'destination': 'str',
         'sender': 'str',
         'keyword': 'str',
         '_from': 'str',
         'to': 'str',
+        'unread': 'bool',
         'metadata': 'object'
     }
 
     attribute_map = {
         'status': 'status',
+        'credits': 'credits',
         'destination': 'destination',
         'sender': 'sender',
         'keyword': 'keyword',
         '_from': 'from',
         'to': 'to',
+        'unread': 'unread',
         'metadata': 'metadata'
     }
 
-    def __init__(self, status=None, destination=None, sender=None, keyword=None, _from=None, to=None, metadata=None):  # noqa: E501
+    def __init__(self, status=None, credits=None, destination=None, sender=None, keyword=None, _from=None, to=None, unread=None, metadata=None):  # noqa: E501
         """Query - a model defined in Swagger"""  # noqa: E501
         self._status = None
+        self._credits = None
         self._destination = None
         self._sender = None
         self._keyword = None
         self.__from = None
         self._to = None
+        self._unread = None
         self._metadata = None
         self.discriminator = None
         if status is not None:
             self.status = status
+        if credits is not None:
+            self.credits = credits
         if destination is not None:
             self.destination = destination
         if sender is not None:
@@ -70,6 +78,8 @@ class Query(object):
             self._from = _from
         if to is not None:
             self.to = to
+        if unread is not None:
+            self.unread = unread
         if metadata is not None:
             self.metadata = metadata
 
@@ -77,7 +87,7 @@ class Query(object):
     def status(self):
         """Gets the status of this Query.  # noqa: E501
 
-        The status of the messages you would like returned (either 'SENT', 'DELIVERED', 'EXPIRED', 'DELETED', 'UNDELIVERABLE', 'ACCEPTED', 'UNKNOWN', 'REJECTED')  # noqa: E501
+        The status of the messages you would like returned (either 'SENT', 'DELIVERED', 'EXPIRED', 'UNDELIVERABLE', 'REJECTED' or 'INCOMING')  # noqa: E501
 
         :return: The status of this Query.  # noqa: E501
         :rtype: str
@@ -88,13 +98,36 @@ class Query(object):
     def status(self, status):
         """Sets the status of this Query.
 
-        The status of the messages you would like returned (either 'SENT', 'DELIVERED', 'EXPIRED', 'DELETED', 'UNDELIVERABLE', 'ACCEPTED', 'UNKNOWN', 'REJECTED')  # noqa: E501
+        The status of the messages you would like returned (either 'SENT', 'DELIVERED', 'EXPIRED', 'UNDELIVERABLE', 'REJECTED' or 'INCOMING')  # noqa: E501
 
         :param status: The status of this Query.  # noqa: E501
         :type: str
         """
 
         self._status = status
+
+    @property
+    def credits(self):
+        """Gets the credits of this Query.  # noqa: E501
+
+        The number of credits used on the message. Floating point number.  # noqa: E501
+
+        :return: The credits of this Query.  # noqa: E501
+        :rtype: float
+        """
+        return self._credits
+
+    @credits.setter
+    def credits(self, credits):
+        """Sets the credits of this Query.
+
+        The number of credits used on the message. Floating point number.  # noqa: E501
+
+        :param credits: The credits of this Query.  # noqa: E501
+        :type: float
+        """
+
+        self._credits = credits
 
     @property
     def destination(self):
@@ -210,6 +243,29 @@ class Query(object):
         """
 
         self._to = to
+
+    @property
+    def unread(self):
+        """Gets the unread of this Query.  # noqa: E501
+
+        In queries for incoming messages ('status' is 'INCOMING'), specify whether you explicitly want unread messages (true) or read messages (false). Omit this parameter in other circumstances.  # noqa: E501
+
+        :return: The unread of this Query.  # noqa: E501
+        :rtype: bool
+        """
+        return self._unread
+
+    @unread.setter
+    def unread(self, unread):
+        """Sets the unread of this Query.
+
+        In queries for incoming messages ('status' is 'INCOMING'), specify whether you explicitly want unread messages (true) or read messages (false). Omit this parameter in other circumstances.  # noqa: E501
+
+        :param unread: The unread of this Query.  # noqa: E501
+        :type: bool
+        """
+
+        self._unread = unread
 
     @property
     def metadata(self):

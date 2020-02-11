@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.big_decimal import BigDecimal  # noqa: F401,E501
 
 
 class CreditsResponse(object):
@@ -30,7 +29,7 @@ class CreditsResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'credits': 'BigDecimal'
+        'credits': 'float'
     }
 
     attribute_map = {
@@ -47,9 +46,10 @@ class CreditsResponse(object):
     def credits(self):
         """Gets the credits of this CreditsResponse.  # noqa: E501
 
+        The number of remaining credits on your SMS Works account. Floating point number.  # noqa: E501
 
         :return: The credits of this CreditsResponse.  # noqa: E501
-        :rtype: BigDecimal
+        :rtype: float
         """
         return self._credits
 
@@ -57,9 +57,10 @@ class CreditsResponse(object):
     def credits(self, credits):
         """Sets the credits of this CreditsResponse.
 
+        The number of remaining credits on your SMS Works account. Floating point number.  # noqa: E501
 
         :param credits: The credits of this CreditsResponse.  # noqa: E501
-        :type: BigDecimal
+        :type: float
         """
         if credits is None:
             raise ValueError("Invalid value for `credits`, must not be `None`")  # noqa: E501

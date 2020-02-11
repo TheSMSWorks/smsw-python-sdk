@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_messages**
-> MessagesResponse get_messages(body)
+> list[MessagesResponse] get_messages(body)
 
 
 
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**MessagesResponse**](MessagesResponse.md)
+[**list[MessagesResponse]**](MessagesResponse.md)
 
 ### Authorization
 

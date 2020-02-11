@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.big_decimal import BigDecimal  # noqa: F401,E501
 
 
 class MessageResponse(object):
@@ -34,7 +33,7 @@ class MessageResponse(object):
         'content': 'str',
         'created': 'str',
         'customerid': 'str',
-        'destination': 'BigDecimal',
+        'destination': 'float',
         'failurereason': 'object',
         'id': 'str',
         'keyword': 'str',
@@ -80,7 +79,8 @@ class MessageResponse(object):
         self._sender = None
         self._tag = None
         self.discriminator = None
-        self.batchid = batchid
+        if batchid is not None:
+            self.batchid = batchid
         self.content = content
         self.created = created
         self.customerid = customerid
@@ -89,7 +89,8 @@ class MessageResponse(object):
             self.failurereason = failurereason
         if id is not None:
             self.id = id
-        self.keyword = keyword
+        if keyword is not None:
+            self.keyword = keyword
         self.messageid = messageid
         self.modified = modified
         self.schedule = schedule
@@ -115,8 +116,6 @@ class MessageResponse(object):
         :param batchid: The batchid of this MessageResponse.  # noqa: E501
         :type: str
         """
-        if batchid is None:
-            raise ValueError("Invalid value for `batchid`, must not be `None`")  # noqa: E501
 
         self._batchid = batchid
 
@@ -195,7 +194,7 @@ class MessageResponse(object):
 
 
         :return: The destination of this MessageResponse.  # noqa: E501
-        :rtype: BigDecimal
+        :rtype: float
         """
         return self._destination
 
@@ -205,7 +204,7 @@ class MessageResponse(object):
 
 
         :param destination: The destination of this MessageResponse.  # noqa: E501
-        :type: BigDecimal
+        :type: float
         """
         if destination is None:
             raise ValueError("Invalid value for `destination`, must not be `None`")  # noqa: E501
@@ -272,8 +271,6 @@ class MessageResponse(object):
         :param keyword: The keyword of this MessageResponse.  # noqa: E501
         :type: str
         """
-        if keyword is None:
-            raise ValueError("Invalid value for `keyword`, must not be `None`")  # noqa: E501
 
         self._keyword = keyword
 

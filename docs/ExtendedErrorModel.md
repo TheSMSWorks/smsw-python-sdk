@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error_code** | [**BigDecimal**](BigDecimal.md) |  | 
+**message** | **str** |  | 
+**error_code** | **float** | Numeric code used to identify the error. Integer. | 
 **status** | **str** |  | 
 **permanent** | **bool** |  | [optional] 
 

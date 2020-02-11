@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.big_decimal import BigDecimal  # noqa: F401,E501
 
 
 class SendMessageResponse(object):
@@ -32,8 +31,8 @@ class SendMessageResponse(object):
     swagger_types = {
         'messageid': 'str',
         'status': 'str',
-        'credits': 'BigDecimal',
-        'credits_used': 'BigDecimal'
+        'credits': 'float',
+        'credits_used': 'float'
     }
 
     attribute_map = {
@@ -105,9 +104,10 @@ class SendMessageResponse(object):
     def credits(self):
         """Gets the credits of this SendMessageResponse.  # noqa: E501
 
+        The number of remaining credits on your SMS Works account. Floating point number.  # noqa: E501
 
         :return: The credits of this SendMessageResponse.  # noqa: E501
-        :rtype: BigDecimal
+        :rtype: float
         """
         return self._credits
 
@@ -115,9 +115,10 @@ class SendMessageResponse(object):
     def credits(self, credits):
         """Sets the credits of this SendMessageResponse.
 
+        The number of remaining credits on your SMS Works account. Floating point number.  # noqa: E501
 
         :param credits: The credits of this SendMessageResponse.  # noqa: E501
-        :type: BigDecimal
+        :type: float
         """
         if credits is None:
             raise ValueError("Invalid value for `credits`, must not be `None`")  # noqa: E501
@@ -128,9 +129,10 @@ class SendMessageResponse(object):
     def credits_used(self):
         """Gets the credits_used of this SendMessageResponse.  # noqa: E501
 
+        The number of credits used to send the message. Floating point number.  # noqa: E501
 
         :return: The credits_used of this SendMessageResponse.  # noqa: E501
-        :rtype: BigDecimal
+        :rtype: float
         """
         return self._credits_used
 
@@ -138,9 +140,10 @@ class SendMessageResponse(object):
     def credits_used(self, credits_used):
         """Sets the credits_used of this SendMessageResponse.
 
+        The number of credits used to send the message. Floating point number.  # noqa: E501
 
         :param credits_used: The credits_used of this SendMessageResponse.  # noqa: E501
-        :type: BigDecimal
+        :type: float
         """
         if credits_used is None:
             raise ValueError("Invalid value for `credits_used`, must not be `None`")  # noqa: E501

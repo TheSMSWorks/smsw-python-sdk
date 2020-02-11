@@ -14,7 +14,6 @@ import pprint
 import re  # noqa: F401
 
 import six
-from swagger_client.models.big_decimal import BigDecimal  # noqa: F401,E501
 
 
 class Message(object):
@@ -35,7 +34,7 @@ class Message(object):
         'content': 'str',
         'schedule': 'str',
         'tag': 'str',
-        'ttl': 'BigDecimal',
+        'ttl': 'float',
         'responseemail': 'list[str]',
         'metadata': 'object'
     }
@@ -130,7 +129,7 @@ class Message(object):
     def content(self):
         """Gets the content of this Message.  # noqa: E501
 
-        Message to send to the recipient. Content can be up to 1280 characters in length. You will be charged 1 credit for each 160 characters, up to a maximum of 8 credits. Messages sent to numbers registered outside the UK will be charged double credits (i.e. 2 credits per 160 characters, up to maximum of 8 credits).  # noqa: E501
+        Message to send to the recipient. Content can be up to 1280 characters in length. Messages of 160 characters or fewer are charged 1 credit. If your message is longer than 160 characters then it will be broken down in to chunks of 153 characters before being sent to the recipient's handset, and you will be charged 1 credit for each 153 characters. Messages sent to numbers registered outside the UK will be typically charged double credits, but for certain countries may be charged fractions of credits (e.g. 2.5). Please contact us for rates for each country.  # noqa: E501
 
         :return: The content of this Message.  # noqa: E501
         :rtype: str
@@ -141,7 +140,7 @@ class Message(object):
     def content(self, content):
         """Sets the content of this Message.
 
-        Message to send to the recipient. Content can be up to 1280 characters in length. You will be charged 1 credit for each 160 characters, up to a maximum of 8 credits. Messages sent to numbers registered outside the UK will be charged double credits (i.e. 2 credits per 160 characters, up to maximum of 8 credits).  # noqa: E501
+        Message to send to the recipient. Content can be up to 1280 characters in length. Messages of 160 characters or fewer are charged 1 credit. If your message is longer than 160 characters then it will be broken down in to chunks of 153 characters before being sent to the recipient's handset, and you will be charged 1 credit for each 153 characters. Messages sent to numbers registered outside the UK will be typically charged double credits, but for certain countries may be charged fractions of credits (e.g. 2.5). Please contact us for rates for each country.  # noqa: E501
 
         :param content: The content of this Message.  # noqa: E501
         :type: str
@@ -178,7 +177,7 @@ class Message(object):
     def tag(self):
         """Gets the tag of this Message.  # noqa: E501
 
-        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns.  # noqa: E501
+        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns. A maximum of 280 characters.  # noqa: E501
 
         :return: The tag of this Message.  # noqa: E501
         :rtype: str
@@ -189,7 +188,7 @@ class Message(object):
     def tag(self, tag):
         """Sets the tag of this Message.
 
-        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns.  # noqa: E501
+        An identifying label for the message, which you can use to filter and report on messages you've sent later. Ideal for campaigns. A maximum of 280 characters.  # noqa: E501
 
         :param tag: The tag of this Message.  # noqa: E501
         :type: str
@@ -201,10 +200,10 @@ class Message(object):
     def ttl(self):
         """Gets the ttl of this Message.  # noqa: E501
 
-        The optional number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.  # noqa: E501
+        The optional number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion. Integer.  # noqa: E501
 
         :return: The ttl of this Message.  # noqa: E501
-        :rtype: BigDecimal
+        :rtype: float
         """
         return self._ttl
 
@@ -212,10 +211,10 @@ class Message(object):
     def ttl(self, ttl):
         """Sets the ttl of this Message.
 
-        The optional number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion.  # noqa: E501
+        The optional number of minutes before the message is deleted. Optional. Omit to prevent delivery report deletion. Integer.  # noqa: E501
 
         :param ttl: The ttl of this Message.  # noqa: E501
-        :type: BigDecimal
+        :type: float
         """
 
         self._ttl = ttl

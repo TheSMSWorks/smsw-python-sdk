@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**batchid** | **str** |  | 
+**batchid** | **str** |  | [optional] 
 **content** | **str** |  | 
 **created** | **str** |  | 
 **customerid** | **str** |  | 
-**destination** | [**BigDecimal**](BigDecimal.md) |  | 
+**destination** | **float** |  | 
 **failurereason** | **object** |  | [optional] 
 **id** | **str** |  | [optional] 
-**keyword** | **str** |  | 
+**keyword** | **str** |  | [optional] 
 **messageid** | **str** |  | 
 **modified** | **str** |  | 
 **schedule** | **str** |  | 

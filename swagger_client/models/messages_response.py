@@ -29,41 +29,14 @@ class MessagesResponse(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'messages': 'object'
     }
 
     attribute_map = {
-        'messages': 'messages'
     }
 
-    def __init__(self, messages=None):  # noqa: E501
+    def __init__(self):  # noqa: E501
         """MessagesResponse - a model defined in Swagger"""  # noqa: E501
-        self._messages = None
         self.discriminator = None
-        self.messages = messages
-
-    @property
-    def messages(self):
-        """Gets the messages of this MessagesResponse.  # noqa: E501
-
-
-        :return: The messages of this MessagesResponse.  # noqa: E501
-        :rtype: object
-        """
-        return self._messages
-
-    @messages.setter
-    def messages(self, messages):
-        """Sets the messages of this MessagesResponse.
-
-
-        :param messages: The messages of this MessagesResponse.  # noqa: E501
-        :type: object
-        """
-        if messages is None:
-            raise ValueError("Invalid value for `messages`, must not be `None`")  # noqa: E501
-
-        self._messages = messages
 
     def to_dict(self):
         """Returns the model properties as a dict"""
