@@ -7,9 +7,11 @@ Name | Type | Description | Notes
 **content** | **str** |  | 
 **created** | **str** |  | 
 **customerid** | **str** |  | 
+**deliveryreporturl** | **str** |  | [optional] 
 **destination** | **float** |  | 
 **failurereason** | **object** |  | [optional] 
 **id** | **str** |  | [optional] 
+**identifier** | **str** |  | [optional] 
 **keyword** | **str** |  | [optional] 
 **messageid** | **str** |  | 
 **modified** | **str** |  | 
